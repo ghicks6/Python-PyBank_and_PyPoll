@@ -75,7 +75,7 @@ print(f"Greatest Increase in Profits:, {greatest_increase_month}, (${highest})")
 print(f"Greatest Decrease in Profits:, {greatest_decrease_month}, (${lowest})")
 
 # Path to create a Text File with the Output
-output_file = os.path.join('Resources', 'output.txt')
+output_file = os.path.join('Analysis', 'output.txt')
 
 # Open File Using "Write" Mode. Specify The Variable To Hold The Contents
 with open(output_file, 'w',) as txtfile:

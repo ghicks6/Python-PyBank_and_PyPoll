@@ -26,13 +26,13 @@ with open(PyPoll_csv, newline = '') as csvfile:
         total_votes += 1
 
         # Calulate the total number of votes each candidate won
-        if (row(2) == "Khan"):
+        if (row[2] == "Khan"):
             khan_votes += 1
-        elif (row(2) == "Correy"):
+        elif (row[2] == "Correy"):
             correy_votes += 1
-        elif (row(2) == "Li"):
+        elif (row[2] == "Li"):
             li_votes += 1
-        elif (row(2) == "O'Tooley"):
+        elif (row[2] == "O'Tooley"):
             otooley_votes += 1
 
     # Calculate the percentage of votes each candidate won
@@ -44,13 +44,13 @@ with open(PyPoll_csv, newline = '') as csvfile:
     # Calculate the winner of the election
     winner = max(khan_votes, correy_votes, li_votes, otooley_votes)
 
-    if winner = khan_votes
+    if winner == khan_votes:
         winner_name = "Khan"
-    elif winner = correy_votes
-        winner_name = "Correy":
-    elif winner = li_votes
+    elif winner == correy_votes:
+        winner_name = "Correy"
+    elif winner == li_votes:
         winner_name = "Li"
-    elif winner = otooley_votes
+    elif winner == otooley_votes:
         winner_name = "O'Tooley"
 
 # Print the findings to the Terminal
@@ -58,16 +58,16 @@ print(f"Election Results")
 print(f"---------------------------")
 print(f"Total Votes: {total_votes}")
 print(f"---------------------------")
-print(f"Khan: {khan_percentage.3%}, {khan_votes}")
-print(f"Correy {correy_percentage.3%}, {correy_votes}")
-print(f"Li:, {li_percentage.3%}, {li_votes}")
-print(f"O'Tooley: {otooley_percentage.3%}, {otooley_votes}")
+print(f"Khan: {khan_percentage:.3%}, ({khan_votes})")
+print(f"Correy {correy_percentage:.3%}, ({correy_votes})")
+print(f"Li:, {li_percentage:.3%}, ({li_votes})")
+print(f"O'Tooley: {otooley_percentage:.3%}, ({otooley_votes})")
 print(f"---------------------------")
 print(f"Winner: {winner_name}")
 print(f"---------------------------")
 
 # Path to create a Text File with the Output
-output_file = os.path.join('Resources', 'output.txt')
+output_file = os.path.join('Analysis', 'output.txt')
 
 # Open File Using "Write" Mode. Specify The Variable To Hold The Contents
 with open(output_file, 'w',) as txtfile:
@@ -76,10 +76,10 @@ with open(output_file, 'w',) as txtfile:
     txtfile.write(f"Election Results\n")
     txtfile.write(f"---------------------------\n")
     txtfile.write(f"Total Votes: {total_votes}\n")
-    txtfile.write(f"Khan: {khan_percentage.3%}, {khan_votes}\n")
-    txtfile.write(f"Correy {correy_percentage.3%}, {correy_votes}\n")
-    txtfile.write(f"Li:, {li_percentage.3%}, {li_votes.3%}\n")
-    txtfile.write(f"O'Tooley: {otooley_percentage.3%}, {otooley_votes}\n")
+    txtfile.write(f"Khan: {khan_percentage:.3%}, ({khan_votes})\n")
+    txtfile.write(f"Correy {correy_percentage:.3%}, ({correy_votes})\n")
+    txtfile.write(f"Li: {li_percentage:.3%}, ({li_votes})\n")
+    txtfile.write(f"O'Tooley: {otooley_percentage:.3%}, ({otooley_votes})\n")
     txtfile.write(f"---------------------------\n")
     txtfile.write(f"Winner: {winner_name}\n")
     txtfile.write(f"---------------------------\n")
