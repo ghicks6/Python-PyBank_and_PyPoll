@@ -5,7 +5,7 @@ import csv
 # Path to collect data from the Resources folder
 PyBank_csv = os.path.join('Resources', 'budget_data.csv')
 
- # Define the Variables
+# Define the Variables
 total_months = 0
 net_amount = 0
 monthly_change = []
